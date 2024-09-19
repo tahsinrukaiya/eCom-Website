@@ -13,28 +13,38 @@ body {
   color: white;
   font-size: 24px;
   font-weight: 700;
+  margin-left: 3%;
 }
 
 .navBar {
   width: 100%;
   background: #1E201E;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   position: sticky;
   top: 0;
 }
 
-.navItem {
+.navBar ul {
   color: white;
   list-style: none;
   display: flex;
-
+  margin-right: 3%;
 }
 
-.navItem li {
+.navBar li a {
+  transition: 0.3s;
+}
+
+.navBar ul li {
   padding-right: 30px;
+}
+
+.navBar ul.open {
+  display: flex;
 }
 
 a:-webkit-any-link {
@@ -42,12 +52,36 @@ a:-webkit-any-link {
   color: white;
 }
 
+.navBar ul li a:hover {
+  background-color: #434242;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.navBar .menu {
+  display: none;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 2rem;
+}
+
+.navBar .menu span {
+  height: 0.4rem;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0.2rem;
+}
+
 .fa-cart-shopping {
   color: white;
   font-size: 20px;
 }
 
-.heading1 {
+.heading_one {
   text-align: center;
   margin-top: 5%;
 }
@@ -64,3 +98,41 @@ a:-webkit-any-link {
   font-weight: normal;
   font-size: 16px;
 }
+
+
+/*-------------------------------MEDIA QUERY--------------------------*/
+@media only screen and (max-width:480px) {
+  .navBar .menu {
+    display: flex;
+  }
+
+  .navBar {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .navBar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+
+  .navBar ul li {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .navBar ul {
+    padding-left: 0;
+    padding-bottom: 30px;
+  }
+
+  .navBar ul li a {
+    margin: 0.2rem 0.5rem;
+
+  }
+}
+
+@media only screen and (max-width:853px) {}

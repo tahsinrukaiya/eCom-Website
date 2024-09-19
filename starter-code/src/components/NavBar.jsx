@@ -1,14 +1,29 @@
 import "../styles/index.css"
-import { Link } from "react-router-dom"
+import { useState } from "react"
+import { Link, NavLink } from "react-router-dom"
 
 export default function NavBar() {
-    return <div className="navBar">
-        <span className="logo">SpeedyMart</span>
-        <ul className="navItem">
-            <li><Link to="index">Home</Link></li>
-            <li><Link to="contact">Contact</Link></li>
-            <li><Link><i className="fa-solid fa-cart-shopping"></i></Link>
-            </li>
-        </ul>
-    </div>
+
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    return (
+        <>
+            <div className="navBar">
+                <div className="logo">
+                    <span><Link to="/">SpeedyMart</Link></span></div>
+                <div className="menu" onClick={() =>
+                    setMenuOpen(!menuOpen)
+                }>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul className={menuOpen ? "open" : ""}>
+                    <li><NavLink to="/">Home</NavLink></li>
+                    <li><NavLink to="contact">Contact</NavLink></li>
+                    <li><Link><i className="fa-solid fa-cart-shopping"></i></Link>
+                    </li>
+                </ul>
+            </div>
+        </>)
 }
