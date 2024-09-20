@@ -16,6 +16,7 @@ body {
   margin-left: 3%;
 }
 
+
 .navBar {
   width: 100%;
   background: #1E201E;
@@ -35,10 +36,6 @@ body {
   margin-right: 3%;
 }
 
-.navBar li a {
-  transition: 0.3s;
-}
-
 .navBar ul li {
   padding-right: 30px;
 }
@@ -52,7 +49,7 @@ a:-webkit-any-link {
   color: white;
 }
 
-.navBar ul li a:hover {
+.active {
   background-color: #434242;
   padding: 10px;
   border-radius: 3px;
@@ -68,6 +65,7 @@ a:-webkit-any-link {
   width: 2.25rem;
   height: 2rem;
 }
+
 
 .navBar .menu span {
   height: 0.4rem;
@@ -104,6 +102,16 @@ a:-webkit-any-link {
 @media only screen and (max-width:480px) {
   .navBar .menu {
     display: flex;
+  }
+
+  .navBar .menu {
+    height: 23px;
+    width: 30px;
+  }
+
+  .navBar .menu .line {
+    height: 4px;
+    width: 28px;
   }
 
   .navBar {
