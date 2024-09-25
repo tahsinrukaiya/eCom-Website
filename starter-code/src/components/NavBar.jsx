@@ -23,7 +23,7 @@ export default function NavBar() {
                     <li><NavLink to="/">Home</NavLink></li>
                     <li><NavLink to="contact">Contact</NavLink></li>
                     <li>
-                        <NavLink to="shopping_cart"><i className="fa-solid fa-cart-shopping"></i></NavLink>
+                        <NavLink to="shopping_cart"><i className="fa-solid fa-cart-shopping"><sup>{"3"}</sup></i></NavLink>
                     </li>
                 </ul>
             </div>
