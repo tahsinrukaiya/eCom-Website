@@ -88,20 +88,14 @@ a:-webkit-any-link {
   display: flex;
   flex-wrap: wrap;
   margin: 3%;
-  flex-direction: column;
+  padding: 30px;
 }
 
-.product {
-  align-items: center;
-  justify-content: center;
-}
-
-.product_image {
+.product_img {
   height: 180px;
   width: 200px;
   margin: 1rem;
   border: 1px #1E201E;
-  margin: 0;
 }
 
 .product_card {
@@ -111,12 +105,14 @@ a:-webkit-any-link {
   box-shadow: 3px 3px 3px #acaaaa;
   border-radius: 7px;
   padding: 20px;
-  margin: 10px;
+  margin-left: 6%;
   text-align: center;
   width: 250px;
   height: 300px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .fa-star {
