@@ -8,6 +8,7 @@ import SingleProduct from "./pages/SingleProduct"
 
 import ShoppingCart from "./pages/ShoppingCart";
 import RouteNotFound from "./RouteNotFound";
+import ProductCard from "./ProductCard"
 
 export default function App() {
 
@@ -19,7 +20,8 @@ export default function App() {
                 <Route index element={<Home />} />
                 <Route path="contact" element={<Contact />} />
                 <Route path="shopping_cart" element={<ShoppingCart />} />
-                <Route path="single_product" element={<SingleProduct />} />
+                <Route path="/" element={<ProductCard />} />
+                <Route path="product/:id" element={<SingleProduct />} />
                 <Route path="*" element={<RouteNotFound />} />
             </Routes>
             <Footer />

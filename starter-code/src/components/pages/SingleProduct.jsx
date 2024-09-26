@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { url } from '../ProductCard';
 
 export default function SingleProduct() {
     const [data, setData] = useState(null);
@@ -13,7 +12,7 @@ export default function SingleProduct() {
             try {
                 setIsError(false);
                 setIsLoading(true);
-                const response = await fetch(url);
+                const response = await fetch(`https://v2.api.noroff.dev/online-shop/${id}`);
                 const json = await response.json();
                 setData(json.data);
                 console.log(json.data);
@@ -24,7 +23,7 @@ export default function SingleProduct() {
                 setIsError(true);
             }
         }
-        getData(`https://v2.api.noroff.dev/online-shop/${id}`);
+        getData();
     }, [id]);
 
     if (isLoading || !data) {
@@ -35,13 +34,23 @@ export default function SingleProduct() {
         return <div>Error</div>;
     }
 
-    console.log(data);
-
     return (
-        <div>
-            <h2>Product Detail</h2>
-            <div>id: {data.id}</div>
-            <div>title: {data.title}</div>
-        </div>
+        <>
+            <div className="heading_one"> <h2>Product Detail</h2></div>
+            <div className="product_container">
+                <div className="product_image">
+                    <img src={data.image.url} alt={data.image.alt || "Product image"} />
+                </div>
+                <div className="product_detail">
+                    <div><h4>{data.title}</h4></div>
+                    <div><h5>{data.price}</h5></div>
+
+                    <div><p>{data.description}</p></div>
+                    <button className="add_btn">Add to Cart</button>
+                </div>
+
+
+            </div>
+        </>
     )
 }

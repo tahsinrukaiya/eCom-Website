@@ -40,9 +40,9 @@ export default function ProductCard() {
                 {data.map((product) => (
                     <div className="product_card" key={product.id}>
                         <img src={product.image.url} alt={product.title} className="product_img" />
-                        <div><h4 className="product_title">{product.title}</h4></div>
+                        <h4 className="product_title">{product.title}</h4>
                         <div><p className="product_price">{product.price}kr</p></div>
-                        <Link to="SingleProduct"><button className="view_btn">View Product</button></Link>
+                        <Link to={`product/${product.id}`}><button className="view_btn">View Product</button></Link>
                     </div>
                 ))}
             </div>
