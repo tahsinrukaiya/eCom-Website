@@ -117,7 +117,14 @@ a:-webkit-any-link {
   width: 250px;
   height: 320px;
   gap: 30px;
+  transition: 0.3s;
 }
+
+.product_card:hover {
+  transform: translate(0px, -8px);
+}
+
+
 
 .view_btn {
   border: 2px solid #2B2B2B;
