@@ -3,6 +3,7 @@ import Footer from "./Footer"
 import { Routes, Route } from "react-router-dom"
 import Home from "./pages/Home"
 import Contact from "./pages/Contact"
+import SingleProduct from "./pages/SingleProduct"
 
 
 import ShoppingCart from "./pages/ShoppingCart";
@@ -18,6 +19,7 @@ export default function App() {
                 <Route index element={<Home />} />
                 <Route path="contact" element={<Contact />} />
                 <Route path="shopping_cart" element={<ShoppingCart />} />
+                <Route path="single_product" element={<SingleProduct />} />
                 <Route path="*" element={<RouteNotFound />} />
             </Routes>
             <Footer />

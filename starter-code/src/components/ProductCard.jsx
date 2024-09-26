@@ -1,5 +1,6 @@
+//import { Link, } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-const url = 'https://v2.api.noroff.dev/online-shop';
+export const url = 'https://v2.api.noroff.dev/online-shop';
 
 export default function ProductCard() {
     const [data, setData] = useState([]);
@@ -44,8 +45,10 @@ export default function ProductCard() {
                 {data.map((product) => (
                     <div className="product_card" key={product.id}>
                         <img src={product.image.url} alt={product.title} className="product_img" />
-                        <div><h4>{product.title}</h4></div>
-                        <div><p>{product.price}kr</p></div>
+                        <div><h4 className="product_title">{product.title}</h4></div>
+                        <div><p className="product_price">{product.price}kr</p></div>
+
+                        <button className="view_btn">View Product</button>
                     </div>
                 ))}
             </div>

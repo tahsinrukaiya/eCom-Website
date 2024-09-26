@@ -92,10 +92,16 @@ a:-webkit-any-link {
 }
 
 .product_img {
-  height: 180px;
-  width: 200px;
-  margin: 1rem;
-  border: 1px #1E201E;
+  height: 200px;
+  width: 230px;
+}
+
+.product_title {
+  margin-top: 5px;
+}
+
+.product_price {
+  font-size: 15px;
 }
 
 .product_card {
@@ -106,13 +112,19 @@ a:-webkit-any-link {
   border-radius: 7px;
   padding: 20px;
   margin-left: 6%;
+  margin-bottom: 5%;
   text-align: center;
   width: 250px;
-  height: 300px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  height: 320px;
   gap: 30px;
+}
+
+.view_btn {
+  border: 2px solid #2B2B2B;
+  padding: 7px;
+  background-color: white;
+  font-family: inherit;
+  font-weight: 500;
 }
 
 .fa-star {
