@@ -39,7 +39,9 @@ export default function ProductCard() {
             <div className="card_container">
                 {data.map((product) => (
                     <div className="product_card" key={product.id}>
-                        <img src={product.image.url} alt={product.title} className="product_img" />
+                        <Link to={`product/${product.id}`}>
+                            <img src={product.image.url} alt={product.title} className="product_img" />
+                        </Link>
                         <h4 className="product_title">{product.title}</h4>
                         <div><p className="product_price">{product.price}kr</p></div>
                         <Link to={`product/${product.id}`}><button className="view_btn">View Product</button></Link>

@@ -1,11 +1,15 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { useContext } from "react";
+import { CartContext } from "../CartContext";
 
 export default function SingleProduct() {
     const [data, setData] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
     let { id } = useParams();
+    //  const [cart, setCart] = useState([]);
+    const { addToCart } = useContext(CartContext);
 
     useEffect(() => {
         async function getData() {
@@ -34,6 +38,13 @@ export default function SingleProduct() {
         return <div>Error</div>;
     }
 
+    const handleAddToCart = () => {
+        console.log("Add to cart button clicked!");
+        addToCart(data);  // Add the product to the cart
+        alert("Item is added to the cart!");
+    };
+
+
     return (
         <>
             <div className="heading_one"> <h2>Product Detail</h2></div>
@@ -42,14 +53,11 @@ export default function SingleProduct() {
                     <img src={data.image.url} alt={data.image.alt || "Product image"} />
                 </div>
                 <div className="product_detail">
-                    <div><h4>{data.title}</h4></div>
-                    <div><h5>{data.price}</h5></div>
-
+                    <div><h3>{data.title}</h3></div>
+                    <div><h5>{data.price}kr</h5></div>
                     <div><p>{data.description}</p></div>
-                    <button className="add_btn">Add to Cart</button>
+                    <button className="add_btn" onClick={handleAddToCart}>Add to Cart</button>
                 </div>
-
-
             </div>
         </>
     )

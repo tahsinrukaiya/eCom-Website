@@ -27,6 +27,7 @@ body {
   padding-bottom: 10px;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 .navBar ul {
@@ -55,6 +56,32 @@ a:-webkit-any-link {
   border-radius: 3px;
 }
 
+.cart_container {
+  position: relative;
+  display: inline-block;
+  margin-right: 10%;
+}
+
+.cart_count {
+  position: absolute;
+  margin-left: 20px;
+  left: 0;
+  top: 8px;
+  right: 0px;
+  background-color: #F45050;
+  color: white;
+  font-weight: 400;
+  border-radius: 50%;
+  padding: 5px;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
 .navBar .menu {
   display: none;
   position: absolute;
@@ -82,6 +109,35 @@ a:-webkit-any-link {
 .heading_one {
   text-align: center;
   margin-top: 5%;
+}
+
+.item_container {
+  margin: 20px;
+}
+
+.items {
+  padding: 10px;
+}
+
+.minus_btn {
+  background-color: #fff;
+  font-weight: bold;
+  margin-left: 7%;
+}
+
+.plus_btn {
+  background-color: #fff;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.checkout_btn {
+  background-color: white;
+  border: 2px solid #2B2B2B;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  padding: 10px;
 }
 
 /*------------STYLING FOR PRODUCT CARDS ON HOME PAGE-------------------------------*/
@@ -296,6 +352,18 @@ input[value] {
 
 /*-------------------------------MEDIA QUERY--------------------------*/
 @media only screen and (max-width:480px) {
+
+  .logo {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .cart_container {
+    margin-left: 70%;
+    top: 0;
+    margin-bottom: 20px;
+  }
+
   .navBar .menu {
     display: flex;
   }
@@ -303,6 +371,8 @@ input[value] {
   .navBar .menu {
     height: 23px;
     width: 30px;
+    margin-top: 10px;
+    margin-right: 20px;
   }
 
   .navBar .menu .line {
@@ -335,8 +405,23 @@ input[value] {
 
   .navBar ul li a {
     margin: 0.2rem 0.5rem;
-
   }
-}
 
-@media only screen and (max-width:853px) {}
+  .product_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 3%;
+  }
+
+  .product_image img {
+    height: 200px;
+    width: 250px;
+    margin-top: 20px;
+  }
+
+  .product_detail {
+    padding: 30px;
+  }
+
+}

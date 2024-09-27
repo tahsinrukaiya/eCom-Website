@@ -1,11 +1,14 @@
 import "../styles/index.css"
 import { useState } from "react"
 import { Link, NavLink } from "react-router-dom"
+import { useContext } from "react";
+import { CartContext } from "./CartContext";
+
 
 export default function NavBar() {
 
     const [menuOpen, setMenuOpen] = useState(false);
-
+    const { cart } = useContext(CartContext);  // Get the cart state from context
     return (
         <>
             <div className="navBar">
@@ -22,10 +25,11 @@ export default function NavBar() {
                 <ul className={menuOpen ? "open" : ""}>
                     <li><NavLink to="/">Home</NavLink></li>
                     <li><NavLink to="contact">Contact</NavLink></li>
-                    <li>
-                        <NavLink to="shopping_cart"><i className="fa-solid fa-cart-shopping"><sup>{"3"}</sup></i></NavLink>
-                    </li>
                 </ul>
+                <div className="cart_container">
+                    <NavLink to="shopping_cart"><i className="fa-solid fa-cart-shopping"></i></NavLink>
+                    <span className="cart_count">{cart.length}</span>
+                </div>
             </div>
         </>)
 }
