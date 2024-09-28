@@ -45,6 +45,10 @@ body {
   display: flex;
 }
 
+Link {
+  color: #1E201E;
+}
+
 a:-webkit-any-link {
   text-decoration: none;
   color: white;
