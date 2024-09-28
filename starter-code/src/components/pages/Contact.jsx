@@ -46,7 +46,7 @@ export default function Contact() {
 
         <div className="form-container">
             <form onSubmit={handleSubmit(onSubmit)} className="contact_form">
-                <h2 className="heading_one">Contact Us</h2>
+                <h1 className="heading_one">Contact Us</h1>
                 <label htmlFor="first-name">First name</label>
                 <input name="first_name"
                     placeholder="Your first name"

@@ -7,7 +7,6 @@ export default function ShoppingCart() {
     // Calculate the total amount
     const totalAmount = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
 
-
     return (
         <div className="heading_one">
             <h1>Your Cart</h1>
@@ -15,6 +14,8 @@ export default function ShoppingCart() {
                 <div className="item_container">
                     {cart.map((item) => (
                         <div className="items" key={item.id}>
+
+                            <div className="item_photo"> <img src={item.image.url} alt="itemPhoto" /></div>
                             {item.title} - ${item.price} x {item.quantity}
                             <button className="minus_btn" onClick={() => decrementQuantity(item.id)}>-</button>
                             <button className="plus_btn" onClick={() => incrementQuantity(item.id)}>+</button>

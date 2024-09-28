@@ -111,12 +111,28 @@ a:-webkit-any-link {
   margin-top: 5%;
 }
 
+/*-----------------------STYLE FOR SHOPPING CART-------------------*/
 .item_container {
   margin: 20px;
 }
 
 .items {
-  padding: 10px;
+  padding: 20px;
+  border-bottom: 1px solid #434242;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.item_photo {
+  height: 50px;
+  width: 50px;
+}
+
+.item_photo img {
+  height: 50px;
+  width: 50px;
+  margin-top: 30px;
+  margin-left: 40%;
 }
 
 .minus_btn {
@@ -424,4 +440,10 @@ input[value] {
     padding: 30px;
   }
 
+  .item_photo img {
+    height: 50px;
+    width: 50px;
+    margin-top: 0;
+    margin-left: 40%;
+  }
 }

@@ -4,8 +4,7 @@ export default function Home() {
 
     return (
         <div>
-            <h2 className="heading_one">All Products</h2>
-
+            <h1 className="heading_one">All Products</h1>
             <ProductCard />
         </div >
     );

@@ -47,7 +47,7 @@ export default function SingleProduct() {
 
     return (
         <>
-            <div className="heading_one"> <h2>Product Detail</h2></div>
+            <div className="heading_one"> <h1>Product Detail</h1></div>
             <div className="product_container">
                 <div className="product_image">
                     <img src={data.image.url} alt={data.image.alt || "Product image"} />
