@@ -1,4 +1,5 @@
 import NavBar from "./NavBar"
+import SearchBar from "./SearchBar"
 import Footer from "./Footer"
 import { Routes, Route } from "react-router-dom"
 import Home from "./pages/Home"
@@ -17,6 +18,7 @@ export default function App() {
         <CartProvider>
             <div className="App">
                 <NavBar />
+                <SearchBar />
                 <Routes>
                     <Route index element={<Home />} />
                     <Route path="contact" element={<Contact />} />

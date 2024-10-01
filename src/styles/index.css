@@ -112,7 +112,7 @@ a:-webkit-any-link {
 /*-----------------------STYLE FOR SHOPPING CART-------------------*/
 
 .wrapper {
-  max-width: 1000px;
+  max-width: 1500px;
   margin: 0, auto;
 }
 
@@ -165,6 +165,60 @@ a:-webkit-any-link {
   font-family: "Montserrat", sans-serif;
   padding: 10px;
   color: #1E201E;
+}
+
+/*--------------------FOR CHECK OUT SUCCESS DIALOUGE BOX--------------------*/
+/* Full-screen overlay */
+.checkout_dialog_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.checkout_dialog {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 400px;
+}
+
+/* Close button */
+.close_btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #1E201E;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.close_btn:hover {
+  background-color: #434242;
+}
+
+.home_btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #1E201E;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  margin-left: 10px;
+}
+
+.home_btn:hover {
+  background-color: #434242;
 }
 
 /*------------STYLING FOR PRODUCT CARDS ON HOME PAGE-------------------------------*/
