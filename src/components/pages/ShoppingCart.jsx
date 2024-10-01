@@ -9,24 +9,26 @@ export default function ShoppingCart() {
 
     return (
         <div className="heading_one">
-            <h1>Your Cart</h1>
-            {cart.length > 0 ? (
-                <div className="item_container">
-                    {cart.map((item) => (
-                        <div className="items" key={item.id}>
+            <div className="wrapper">
+                <h1>Your Cart</h1>
+                {cart.length > 0 ? (
+                    <div className="item_container">
+                        {cart.map((item) => (
+                            <div className="items" key={item.id}>
 
-                            <div className="item_photo"> <img src={item.image.url} alt="itemPhoto" /></div>
-                            {item.title} - ${item.price} x {item.quantity}
-                            <button className="minus_btn" onClick={() => decrementQuantity(item.id)}>-</button>
-                            <button className="plus_btn" onClick={() => incrementQuantity(item.id)}>+</button>
-                        </div>
-                    ))}
-                    <h3>Total: ${totalAmount.toFixed(2)}</h3>
-                    <button className="checkout_btn">Proceed to checkout</button>
-                </div>
-            ) : (
-                <p>Your cart is empty</p>
-            )}
+                                <div className="item_photo"> <img src={item.image.url} alt="itemPhoto" /></div>
+                                {item.title} - ${item.price} x {item.quantity}
+                                <button className="minus_btn" onClick={() => decrementQuantity(item.id)}>-</button>
+                                <button className="plus_btn" onClick={() => incrementQuantity(item.id)}>+</button>
+                            </div>
+                        ))}
+                        <h3>Total: ${totalAmount.toFixed(2)}</h3>
+                        <button className="checkout_btn">Proceed to checkout</button>
+                    </div>
+
+                ) : (
+                    <p>Your cart is empty</p>
+                )}</div>
         </div>
     );
 }
