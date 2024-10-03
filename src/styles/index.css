@@ -109,6 +109,37 @@ a:-webkit-any-link {
   margin-top: 5%;
 }
 
+/*---------------------SEARCH BAR-----------------*/
+.search_form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search_input {
+  width: 200px;
+}
+
+.fa-magnifying-glass {
+  font-size: 20px;
+}
+
+.search_btn {
+  margin-left: 20px;
+  padding: 10px 20px;
+  background-color: #1E201E;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.search_btn:hover {
+  background-color: #434242;
+}
+
+
+
 /*-----------------------STYLE FOR SHOPPING CART-------------------*/
 
 .wrapper {
@@ -487,6 +518,10 @@ input[value] {
 
   .navBar ul li a {
     margin: 0.2rem 0.5rem;
+  }
+
+  .search_form {
+    margin-top: 0;
   }
 
   .product_container {
