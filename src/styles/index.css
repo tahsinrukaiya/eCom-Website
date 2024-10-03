@@ -138,7 +138,34 @@ a:-webkit-any-link {
   background-color: #434242;
 }
 
+.drop_down {
+  position: absolute;
 
+  background-color: white;
+
+  border: 1px solid #ccc;
+
+  z-index: 1000;
+
+  max-height: 200px;
+
+  overflow-y: auto;
+
+  width: fit-content;
+
+}
+
+.drop_down_row {
+  padding: 10px;
+
+  cursor: pointer;
+
+}
+
+.drop_down_row:hover {
+  background-color: #f0f0f0;
+
+}
 
 /*-----------------------STYLE FOR SHOPPING CART-------------------*/
 
