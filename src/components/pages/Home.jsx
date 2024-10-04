@@ -39,9 +39,9 @@ export default function Home() {
 
     return (
         <div>
-            <SearchBar data={data} /> {/* Pass data as a prop */}
+            <SearchBar data={data} />
             <h1 className="heading_one">All Products</h1>
-            <ProductCard data={data} /> {/* Pass data as a prop */}
+            <ProductCard data={data} />
         </div>
     );
 }

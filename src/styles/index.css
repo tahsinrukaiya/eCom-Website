@@ -16,7 +16,6 @@ body {
   margin-left: 3%;
 }
 
-
 .navBar {
   width: 100%;
   background: #1E201E;
@@ -205,7 +204,7 @@ a:-webkit-any-link {
 }
 
 /*--------------------FOR CHECK OUT SUCCESS DIALOUGE BOX--------------------*/
-/* Full-screen overlay */
+
 .checkout_dialog_overlay {
   position: fixed;
   top: 0;
@@ -290,9 +289,24 @@ a:-webkit-any-link {
   margin-bottom: 5%;
   text-align: center;
   width: 250px;
-  height: 320px;
+  height: 400px;
   gap: 30px;
   transition: 0.3s;
+}
+
+.old_price {
+  font-size: 14px;
+}
+
+.discount_price {
+  color: #F45050;
+  font-size: smaller;
+  font-weight: bold;
+}
+
+.discount_percentage {
+  color: #F45050;
+  font-size: 14px;
 }
 
 .product_card:hover {

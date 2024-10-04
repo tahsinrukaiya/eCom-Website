@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import { useContext } from "react";
 import { CartContext } from "../CartContext";
 
 export default function SingleProduct() {
@@ -8,7 +7,6 @@ export default function SingleProduct() {
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
     let { id } = useParams();
-    //  const [cart, setCart] = useState([]);
     const { addToCart } = useContext(CartContext);
 
     useEffect(() => {
@@ -30,6 +28,12 @@ export default function SingleProduct() {
         getData();
     }, [id]);
 
+
+    function calculateDiscountPercentage(price, discountedPrice) {
+        if (price === discountedPrice) return 0;
+        return Math.round(((price - discountedPrice) / price) * 100);
+    }
+
     if (isLoading || !data) {
         return <div>Loading</div>;
     }
@@ -40,10 +44,11 @@ export default function SingleProduct() {
 
     const handleAddToCart = () => {
         console.log("Add to cart button clicked!");
-        addToCart(data);  // Add the product to the cart
+        addToCart(data);
         alert("Item is added to the cart!");
     };
 
+    const discountPercentage = calculateDiscountPercentage(data.price, data.discountedPrice);
 
     return (
         <>
@@ -54,11 +59,21 @@ export default function SingleProduct() {
                 </div>
                 <div className="product_detail">
                     <div><h3>{data.title}</h3></div>
-                    <div><h5>{data.price}kr</h5></div>
+                    <div>
+                        {data.price !== data.discountedPrice ? (
+                            <>
+                                <h5 className="old_price">{data.price}kr</h5>
+                                <h5 className="discount_price">Sell Price: {data.discountedPrice}kr</h5>
+                                <p className="discount_percentage">{discountPercentage}% off</p>
+                            </>
+                        ) : (
+                            <h5>{data.price}kr</h5>
+                        )}
+                    </div>
                     <div><p>{data.description}</p></div>
                     <button className="add_btn" onClick={handleAddToCart}>Add to Cart</button>
                 </div>
             </div>
         </>
-    )
+    );
 }
