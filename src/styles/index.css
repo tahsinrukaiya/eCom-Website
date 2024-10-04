@@ -114,28 +114,15 @@ a:-webkit-any-link {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 5%;
 }
 
 .search_input {
-  width: 200px;
+  width: 400px;
 }
 
 .fa-magnifying-glass {
   font-size: 20px;
-}
-
-.search_btn {
-  margin-left: 20px;
-  padding: 10px 20px;
-  background-color: #1E201E;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-family: inherit;
-}
-
-.search_btn:hover {
-  background-color: #434242;
 }
 
 .drop_down {

@@ -12,14 +12,6 @@ export default function SearchBar({ data }) {
         setDropdownOpen(true);
     };
 
-    const onSearch = () => {
-        if (value) {
-            navigate(`/search?query=${value}`);
-        }
-        setDropdownOpen(false);
-        console.log("search", value);
-    };
-
     const onSelectItem = (item) => {
         setValue(item.title);
         setDropdownOpen(false);
@@ -50,13 +42,11 @@ export default function SearchBar({ data }) {
                     className="search_input"
                     value={value}
                     onChange={onChange}
-                    placeholder="search..."
+                    placeholder="search product"
                     onBlur={onBlur}
                     onFocus={() => setDropdownOpen(true)}
                 />
-                <button className="search_btn" type="button" onClick={onSearch}>
-                    Search
-                </button>
+
                 {isDropdownOpen && filteredData.length > 0 && (
                     <div className="drop_down">
                         {filteredData.map((item) => (
