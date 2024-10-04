@@ -1,14 +1,11 @@
 import { createContext, useState } from "react";
-import PropTypes from 'prop-types';  // Import PropTypes
+import PropTypes from 'prop-types';
 
-// Create the context
 export const CartContext = createContext();
 
-// Create the provider component
 export function CartProvider({ children }) {
     const [cart, setCart] = useState([]);
 
-    // Function to add item to cart or update quantity if it exists
     const addToCart = (item) => {
         const existingItem = cart.find(cartItem => cartItem.id === item.id);
         if (existingItem) {
@@ -22,7 +19,6 @@ export function CartProvider({ children }) {
         }
     };
 
-    // Function to increase item quantity
     const incrementQuantity = (id) => {
         setCart(cart.map(item =>
             item.id === id
@@ -31,21 +27,17 @@ export function CartProvider({ children }) {
         ));
     };
 
-    // Function to decrease item quantity
     const decrementQuantity = (id) => {
         const updatedCart = cart.map(item =>
             item.id === id
                 ? { ...item, quantity: item.quantity - 1 }
                 : item
-        ).filter(item => item.quantity > 0); // Filter out items with quantity 0
+        ).filter(item => item.quantity > 0);
 
         setCart(updatedCart);
     };
-
-
-    // Function to clear the cart
     const clearCart = () => {
-        setCart([]); // This will empty the cart
+        setCart([]);
     };
 
     return (
@@ -55,7 +47,6 @@ export function CartProvider({ children }) {
     );
 }
 
-// PropTypes validation
 CartProvider.propTypes = {
     children: PropTypes.node.isRequired,
 };

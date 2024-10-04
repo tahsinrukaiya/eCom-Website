@@ -1,11 +1,9 @@
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types'; // Import PropTypes
+import PropTypes from 'prop-types';
 
-export default function ProductCard({ data }) { // Accept data as a prop
-
-    // Check if data is valid
+export default function ProductCard({ data }) {
     if (!data || !Array.isArray(data) || data.length === 0) {
-        return <div>No products available.</div>; // Handle empty data case
+        return <div>No products available.</div>;
     }
 
     return (
@@ -28,7 +26,7 @@ export default function ProductCard({ data }) { // Accept data as a prop
     );
 }
 
-// Add prop types validation
+
 ProductCard.propTypes = {
     data: PropTypes.arrayOf(
         PropTypes.shape({

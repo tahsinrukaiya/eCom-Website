@@ -8,7 +8,7 @@ import { CartContext } from "./CartContext";
 export default function NavBar() {
 
     const [menuOpen, setMenuOpen] = useState(false);
-    const { cart } = useContext(CartContext);  // Get the cart state from context
+    const { cart } = useContext(CartContext);
     return (
         <>
             <div className="navBar">

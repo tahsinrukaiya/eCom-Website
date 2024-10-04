@@ -140,30 +140,22 @@ a:-webkit-any-link {
 
 .drop_down {
   position: absolute;
-
-  background-color: white;
-
-  border: 1px solid #ccc;
-
+  background-color: #686464;
   z-index: 1000;
-
   max-height: 200px;
-
   overflow-y: auto;
-
   width: fit-content;
-
+  border: 1px solid #ccc;
 }
 
 .drop_down_row {
   padding: 10px;
-
   cursor: pointer;
 
 }
 
 .drop_down_row:hover {
-  background-color: #f0f0f0;
+  background-color: #434242;
 
 }
 

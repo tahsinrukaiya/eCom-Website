@@ -1,19 +1,36 @@
 import { useState } from 'react';
-import PropTypes from 'prop-types'; // Import PropTypes
+import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 
 export default function SearchBar({ data }) {
     const [value, setValue] = useState("");
-    const [isDropdownOpen, setDropdownOpen] = useState(false); // State to control dropdown visibility
+    const [isDropdownOpen, setDropdownOpen] = useState(false);
+    const navigate = useNavigate();
 
     const onChange = (event) => {
         setValue(event.target.value);
-        setDropdownOpen(true); // Open dropdown on input change
+        setDropdownOpen(true);
     };
 
-    const onSearch = (searchTerm) => {
-        setValue(searchTerm);
-        setDropdownOpen(false); // Close dropdown after selecting an item
-        console.log("search", searchTerm);
+    const onSearch = () => {
+        if (value) {
+            navigate(`/search?query=${value}`);
+        }
+        setDropdownOpen(false);
+        console.log("search", value);
+    };
+
+    const onSelectItem = (item) => {
+        setValue(item.title);
+        setDropdownOpen(false);
+        navigate(`/product/${item.id}`);
+    };
+
+
+    const onBlur = () => {
+        setTimeout(() => {
+            setDropdownOpen(false);
+        }, 100);
     };
 
     const filteredData = data.filter((item) => {
@@ -21,8 +38,7 @@ export default function SearchBar({ data }) {
         const title = item.title.toLowerCase();
         return searchTerm && title.startsWith(searchTerm) && title !== searchTerm;
     });
-    console.log(data);
-    console.log(filteredData);
+
     return (
         <div className="search_container">
             <form className="search_form" onSubmit={(e) => e.preventDefault()}>
@@ -35,10 +51,10 @@ export default function SearchBar({ data }) {
                     value={value}
                     onChange={onChange}
                     placeholder="search..."
-                    onBlur={() => setDropdownOpen(false)}
+                    onBlur={onBlur}
                     onFocus={() => setDropdownOpen(true)}
                 />
-                <button className="search_btn" type="button" onClick={() => onSearch(value)}>
+                <button className="search_btn" type="button" onClick={onSearch}>
                     Search
                 </button>
                 {isDropdownOpen && filteredData.length > 0 && (
@@ -46,8 +62,8 @@ export default function SearchBar({ data }) {
                         {filteredData.map((item) => (
                             <div
                                 key={item.id}
-                                onClick={() => onSearch(item.title)}
                                 className="drop_down_row"
+                                onMouseDown={() => onSelectItem(item)}
                             >
                                 {item.title}
                             </div>
