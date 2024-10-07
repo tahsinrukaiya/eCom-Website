@@ -23,7 +23,7 @@ export default function ProductCard({ data }) {
                         {product.price !== product.discountedPrice ? (
                             <>
                                 <p className="old_price">{product.price}kr</p>
-                                <p className="discount_price">Sell Price: {product.discountedPrice}kr</p>
+                                <p className="discount_price">Now {product.discountedPrice}kr</p>
                                 <p className="discount_percentage">
                                     {calculateDiscountPercentage(product.price, product.discountedPrice)}% off
                                 </p>
