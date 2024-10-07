@@ -51,24 +51,24 @@ export default function Contact() {
                 <input name="first_name"
                     placeholder="Your first name"
                     {...register('firstName')} />
-                <p>{errors.firstName?.message}</p>
+                <p className="error_message">{errors.firstName?.message}</p>
 
                 <label htmlFor="last-name">Last name</label>
                 <input name="last_name"
                     placeholder="Your last name"
                     {...register('lastName')} />
-                <p>{errors.lastName?.message}</p>
+                <p className="error_message">{errors.lastName?.message}</p>
 
                 <label htmlFor="email">Email</label>
                 <input name="email"
                     placeholder="Your email" {...register('email')} />
-                <p>{errors.email?.message}</p>
+                <p className="error_message">{errors.email?.message}</p>
 
                 <label htmlFor="message">Message</label>
                 <textarea name="message"
                     placeholder="Your message"
                     {...register('message')} />
-                <p>{errors.message?.message}</p>
+                <p className="error_message">{errors.message?.message}</p>
 
                 <input type="submit" value="Send Message" />
             </form>

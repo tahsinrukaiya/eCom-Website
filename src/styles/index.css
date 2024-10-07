@@ -456,32 +456,11 @@ input[value] {
   font-family: "Montserrat", sans-serif;
 }
 
-/*
-.form-errors {
+.error_message {
   font-size: 13px;
   color: #F45050;
   margin-top: 3px;
-  display: none;
 }
-
-.success {
-  color: #508D69;
-  font-size: 1.5rem;
-  text-align: center;
-  margin-top: 3%;
-  display: none;
-}
-
-.warn {
-  color: #F45050;
-  font-size: 1.5rem;
-  text-align: center;
-  margin-top: 3%;
-  display: none;
-  padding-top: 3px;
-}
-*/
-
 
 /*-------------------------------MEDIA QUERY--------------------------*/
 @media only screen and (max-width:480px) {
