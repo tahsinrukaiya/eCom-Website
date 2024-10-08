@@ -289,7 +289,7 @@ a:-webkit-any-link {
   margin-bottom: 5%;
   text-align: center;
   width: 250px;
-  height: 400px;
+  height: 420px;
   gap: 30px;
   transition: 0.3s;
 }
@@ -320,6 +320,24 @@ a:-webkit-any-link {
   background-color: white;
   font-family: inherit;
   font-weight: 500;
+}
+
+.star-rating {
+  --star-size: 1.2rem;
+  --star-color: lightgray;
+  --star-background: gold;
+  font-size: var(--star-size);
+  line-height: 1;
+  padding-bottom: 10px;
+}
+
+.star-rating::before {
+  content: '★★★★★';
+  letter-spacing: 3px;
+  background: linear-gradient(90deg, var(--star-background) calc(var(--rating) / 5 * 100%), var(--star-color) calc(var(--rating) / 5 * 100%));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  overflow: hidden;
 }
 
 /*---------------------------STYLE FOR SINGLE PRODUCT PAGE-----------------------*/

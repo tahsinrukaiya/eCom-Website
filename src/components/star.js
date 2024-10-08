@@ -1,7 +1,6 @@
 const star = "★";
-const noStar = "☆";
-const halfStar = "";
-console.log(star, noStar, halfStar);
+//const noStar = "☆";
+
 
 export default function starRating(rating) {
     let stars = "";

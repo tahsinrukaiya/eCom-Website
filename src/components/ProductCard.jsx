@@ -31,6 +31,7 @@ export default function ProductCard({ data }) {
                         ) : (
                             <p className="price">{product.price}kr</p>
                         )}
+                        <div className="star-rating" style={{ '--rating': product.rating }}></div>
                     </div>
                     <Link to={`product/${product.id}`}>
                         <button className="view_btn">View Product</button>
@@ -51,6 +52,7 @@ ProductCard.propTypes = {
             image: PropTypes.shape({
                 url: PropTypes.string.isRequired,
             }).isRequired,
+            rating: PropTypes.number.isRequired,
         })
     ).isRequired,
 };
