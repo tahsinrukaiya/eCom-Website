@@ -2,8 +2,6 @@ import { useEffect, useState } from 'react';
 import ProductCard from '../ProductCard';
 import SearchBar from '../SearchBar';
 
-export const url = 'https://v2.api.noroff.dev/online-shop';
-
 export default function Home() {
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
@@ -14,7 +12,7 @@ export default function Home() {
             try {
                 setIsError(false);
                 setIsLoading(true);
-                const response = await fetch(url);
+                const response = await fetch(`${import.meta.env.VITE_BASE_URL}`);
                 const json = await response.json();
                 setData(json.data);
                 console.log(json);
@@ -41,7 +39,7 @@ export default function Home() {
         <div>
             <SearchBar data={data} />
             <h1 className="heading_one">All Products</h1>
-            <ProductCard data={data} />
+            <ProductCard data={data} baseURL={import.meta.env.VITE_BASE_URL} />
         </div>
     );
 }

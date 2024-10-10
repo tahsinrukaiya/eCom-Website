@@ -16,7 +16,11 @@ export default function ProductCard({ data }) {
             {data.map((product) => (
                 <div className="product_card" key={product.id}>
                     <Link to={`product/${product.id}`}>
-                        <img src={product.image.url} alt={product.title} className="product_img" />
+                        <img
+                            src={product.image.url}
+                            alt={product.image.alt || product.title}
+                            className="product_img"
+                        />
                     </Link>
                     <h4 className="product_title">{product.title}</h4>
                     <div>
@@ -51,6 +55,7 @@ ProductCard.propTypes = {
             discountedPrice: PropTypes.number.isRequired,
             image: PropTypes.shape({
                 url: PropTypes.string.isRequired,
+                alt: PropTypes.string,
             }).isRequired,
             rating: PropTypes.number.isRequired,
         })

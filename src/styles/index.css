@@ -166,6 +166,7 @@ a:-webkit-any-link {
 .item_photo {
   height: 50px;
   width: 50px;
+  padding-bottom: 5px;
 }
 
 .item_photo img {
@@ -173,6 +174,7 @@ a:-webkit-any-link {
   width: 50px;
   margin-top: 30px;
   margin-left: 60%;
+
 }
 
 .minus_btn {
@@ -181,6 +183,7 @@ a:-webkit-any-link {
   margin-left: 7%;
   color: #1E201E;
   border: 1px solid #1E201E;
+  border-radius: 50%;
   padding: 5, 5, 5, 5;
 }
 
@@ -190,6 +193,7 @@ a:-webkit-any-link {
   margin-left: 5px;
   color: #1E201E;
   border: 1px solid #1E201E;
+  border-radius: 50%;
   padding: 5, 5, 5, 5;
 }
 
@@ -368,6 +372,11 @@ a:-webkit-any-link {
   padding: 5px;
 }
 
+.reviews_section {
+  margin-left: 6%;
+}
+
+
 /*-------------------FOOTER STYLING PAGE----------------------*/
 .footer {
   margin-top: 50%;
@@ -492,6 +501,7 @@ input[value] {
     margin-left: 70%;
     margin-top: 0;
     margin-bottom: 20px;
+    display: inline-block;
   }
 
   .navBar .menu {
@@ -499,8 +509,8 @@ input[value] {
   }
 
   .navBar .menu {
-    height: 23px;
-    width: 30px;
+    height: 20px;
+    width: 25px;
     margin-top: 10px;
     margin-right: 20px;
   }
@@ -538,14 +548,13 @@ input[value] {
   }
 
   .search_form {
-    margin-top: 5%;
+    margin-top: 0;
   }
 
   .product_container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 3%;
   }
 
   .product_image img {
@@ -564,4 +573,9 @@ input[value] {
     margin-top: 0;
     margin-left: 40%;
   }
+
+  .reviews_section {
+    margin-left: 12%;
+  }
+
 }

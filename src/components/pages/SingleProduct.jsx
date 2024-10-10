@@ -14,10 +14,9 @@ export default function SingleProduct() {
             try {
                 setIsError(false);
                 setIsLoading(true);
-                const response = await fetch(`https://v2.api.noroff.dev/online-shop/${id}`);
+                const response = await fetch(`${import.meta.env.VITE_BASE_URL}/${id}`);
                 const json = await response.json();
                 setData(json.data);
-                console.log(json.data);
                 setIsLoading(false);
             } catch (error) {
                 console.error("Error fetching data:", error);
@@ -28,18 +27,17 @@ export default function SingleProduct() {
         getData();
     }, [id]);
 
-
     function calculateDiscountPercentage(price, discountedPrice) {
         if (price === discountedPrice) return 0;
         return Math.round(((price - discountedPrice) / price) * 100);
     }
 
     if (isLoading || !data) {
-        return <div>Loading</div>;
+        return <div>Loading...</div>;
     }
 
     if (isError) {
-        return <div>Error</div>;
+        return <div>Error loading product data.</div>;
     }
 
     const handleAddToCart = () => {
@@ -52,18 +50,18 @@ export default function SingleProduct() {
 
     return (
         <>
-            <div className="heading_one"> <h1>Product Detail</h1></div>
+            <div className="heading_one"><h1>Product Detail</h1></div>
             <div className="product_container">
                 <div className="product_image">
                     <img src={data.image.url} alt={data.image.alt || "Product image"} />
                 </div>
                 <div className="product_detail">
-                    <div><h3>{data.title}</h3></div>
+                    <div><h2>{data.title}</h2></div>
                     <div>
                         {data.price !== data.discountedPrice ? (
                             <>
                                 <h5 className="old_price">{data.price}kr</h5>
-                                <h5 className="discount_price">Sell Price: {data.discountedPrice}kr</h5>
+                                <h5 className="discount_price">Now: {data.discountedPrice}kr</h5>
                                 <p className="discount_percentage">{discountPercentage}% off</p>
                             </>
                         ) : (
@@ -73,6 +71,21 @@ export default function SingleProduct() {
                     <div><p>{data.description}</p></div>
                     <button className="add_btn" onClick={handleAddToCart}>Add to Cart</button>
                 </div>
+            </div>
+
+            <div className="reviews_section">
+                <h3>Customer Reviews</h3>
+                {data.reviews && data.reviews.length > 0 ? (
+                    data.reviews.map(review => (
+                        <div className="review" key={review.id}>
+                            <h4>{review.username}</h4>
+                            <p>Rating: {review.rating} ⭐</p>
+                            <p>{review.description}</p>
+                        </div>
+                    ))
+                ) : (
+                    <p className="no_review">No reviews available.</p>
+                )}
             </div>
         </>
     );
