@@ -108,6 +108,7 @@ a:-webkit-any-link {
   margin-top: 5%;
 }
 
+
 /*---------------------SEARCH BAR-----------------*/
 .search_form {
   display: flex;
@@ -199,6 +200,7 @@ a:-webkit-any-link {
 
 .checkout_btn {
   background-color: white;
+  border-radius: 0;
   border: 2px solid #2B2B2B;
   font-size: 16px;
   font-weight: 500;
@@ -484,7 +486,7 @@ input[value] {
 }
 
 .error_message {
-  font-size: 13px;
+  font-size: 14px;
   color: #F45050;
   margin-top: 3px;
 }
@@ -558,8 +560,8 @@ input[value] {
   }
 
   .product_image img {
-    height: 200px;
-    width: 250px;
+    height: 300px;
+    width: 280px;
     margin-top: 20px;
   }
 
@@ -575,7 +577,8 @@ input[value] {
   }
 
   .reviews_section {
-    margin-left: 12%;
+    padding: 50px;
+    margin-left: 0;
   }
 
 }
