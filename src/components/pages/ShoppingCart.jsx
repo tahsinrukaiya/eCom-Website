@@ -53,7 +53,7 @@ export default function ShoppingCart() {
                             <h2>Checkout Successful!</h2>
                             <p>Thank you for your purchase.</p>
                             <button className="close_btn" onClick={closeDialog}>Close</button>
-                            <button className="home_btn" onClick={goToHomePage}>Go to Home Page</button>
+                            <button className="home_btn" onClick={goToHomePage}>Continue Shopping</button>
                         </div>
                     </div>
                 </div>

@@ -185,7 +185,7 @@ a:-webkit-any-link {
   color: #1E201E;
   border: 1px solid #1E201E;
   border-radius: 50%;
-  padding: 5, 5, 5, 5;
+  padding: 7, 7, 7, 7;
 }
 
 .plus_btn {
@@ -195,7 +195,7 @@ a:-webkit-any-link {
   color: #1E201E;
   border: 1px solid #1E201E;
   border-radius: 50%;
-  padding: 5, 5, 5, 5;
+  padding: 7, 7, 7, 7;
 }
 
 .checkout_btn {
@@ -233,7 +233,6 @@ a:-webkit-any-link {
   max-width: 400px;
 }
 
-/* Close button */
 .close_btn {
   margin-top: 20px;
   padding: 10px 20px;
@@ -272,7 +271,7 @@ a:-webkit-any-link {
 }
 
 .product_img {
-  height: 200px;
+  height: 220px;
   width: 230px;
 }
 
