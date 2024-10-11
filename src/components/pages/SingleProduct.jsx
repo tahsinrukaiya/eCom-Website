@@ -1,13 +1,13 @@
-import { useEffect, useState, useContext } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { CartContext } from "../CartContext";
+import { useCartStore } from '../CartContext';
 
 export default function SingleProduct() {
     const [data, setData] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
     let { id } = useParams();
-    const { addToCart } = useContext(CartContext);
+    const { addToCart } = useCartStore();
 
     useEffect(() => {
         async function getData() {

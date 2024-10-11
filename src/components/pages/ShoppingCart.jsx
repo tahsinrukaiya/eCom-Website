@@ -1,14 +1,13 @@
-import { useContext, useState } from 'react';
-import { CartContext } from '../CartContext';
+import { useState } from 'react';
+import { useCartStore } from '../CartContext';
 import { useNavigate } from 'react-router-dom';
 
 export default function ShoppingCart() {
-    const { cart, incrementQuantity, decrementQuantity, clearCart } = useContext(CartContext);
+    const { cart, incrementQuantity, decrementQuantity, clearCart } = useCartStore();
     const [showCheckoutSuccess, setShowCheckoutSuccess] = useState(false);
     const navigate = useNavigate();
 
-
-    const totalAmount = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+    const totalAmount = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
     const handleCheckout = () => {
         setShowCheckoutSuccess(true);
@@ -31,7 +30,9 @@ export default function ShoppingCart() {
                     <div className="item_container">
                         {cart.map((item) => (
                             <div className="items" key={item.id}>
-                                <div className="item_photo"> <img src={item.image.url} alt="itemPhoto" /></div>
+                                <div className="item_photo">
+                                    <img src={item.image.url} alt="itemPhoto" />
+                                </div>
                                 {item.title} - {item.price}kr x {item.quantity}
                                 <button className="minus_btn" onClick={() => decrementQuantity(item.id)}>-</button>
                                 <button className="plus_btn" onClick={() => incrementQuantity(item.id)}>+</button>
