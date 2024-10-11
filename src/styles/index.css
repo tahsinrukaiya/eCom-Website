@@ -277,6 +277,7 @@ a:-webkit-any-link {
 
 .product_title {
   margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .product_price {
@@ -294,9 +295,13 @@ a:-webkit-any-link {
   margin-bottom: 5%;
   text-align: center;
   width: 250px;
-  height: 420px;
+  height: 380px;
   gap: 30px;
   transition: 0.3s;
+}
+
+.product_card p {
+  margin: 3px;
 }
 
 .old_price {
@@ -383,6 +388,7 @@ a:-webkit-any-link {
 
 .review {
   color: #2B2B2B;
+  font-size: 15px;
 }
 
 .no_review {
@@ -404,7 +410,6 @@ a:-webkit-any-link {
 }
 
 /*----------------------------CONTACT PAGE CSS-------------------------*/
-
 .form-container {
   height: 120vh;
   padding-top: 5px;
@@ -463,6 +468,7 @@ textarea::-webkit-scrollbar-thumb {
 
 input[type="submit"] {
   border-bottom: none;
+  border-radius: none;
 }
 
 input[type="submit"] {
@@ -590,6 +596,14 @@ input[value] {
   .reviews_section {
     padding: 50px;
     margin-left: 0;
+  }
+
+  .minus_btn {
+    padding: 5, 5, 5, 5;
+  }
+
+  .plus_btn {
+    padding: 5, 5, 5, 5;
   }
 
 }
