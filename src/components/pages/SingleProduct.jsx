@@ -78,7 +78,7 @@ export default function SingleProduct() {
                 {data.reviews && data.reviews.length > 0 ? (
                     data.reviews.map(review => (
                         <div className="review" key={review.id}>
-                            <h4>{review.username}</h4>
+                            <h5>{review.username}</h5>
                             <p>Rating: {review.rating} ⭐</p>
                             <p>{review.description}</p>
                         </div>

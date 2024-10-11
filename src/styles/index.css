@@ -353,6 +353,10 @@ a:-webkit-any-link {
   margin-top: 5%;
 }
 
+.product_detail {
+  padding-right: 20px;
+}
+
 .product_image img {
   height: 500px;
   width: 450px;
@@ -377,6 +381,13 @@ a:-webkit-any-link {
   margin-left: 6%;
 }
 
+.review {
+  color: #2B2B2B;
+}
+
+.no_review {
+  color: #2B2B2B;
+}
 
 /*-------------------FOOTER STYLING PAGE----------------------*/
 .footer {
@@ -447,6 +458,7 @@ textarea::-webkit-scrollbar-thumb {
 .button {
   text-align: center;
   margin-top: 3%;
+  border-radius: none;
 }
 
 input[type="submit"] {
