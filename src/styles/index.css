@@ -138,16 +138,13 @@ a:-webkit-any-link {
 .drop_down_row {
   padding: 10px;
   cursor: pointer;
-
 }
 
 .drop_down_row:hover {
   background-color: #434242;
-
 }
 
 /*-----------------------STYLE FOR SHOPPING CART-------------------*/
-
 .wrapper {
   max-width: 1500px;
   margin: 0, auto;
@@ -158,7 +155,7 @@ a:-webkit-any-link {
 }
 
 .items {
-  padding: 20px;
+  padding: 10px;
   border-bottom: 1px solid #434242;
   margin-left: 3%;
   margin-right: 3%;
@@ -176,6 +173,11 @@ a:-webkit-any-link {
   margin-top: 30px;
   margin-left: 60%;
 
+}
+
+.plus_minus {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .minus_btn {
@@ -531,12 +533,12 @@ input[value] {
     height: 20px;
     width: 25px;
     margin-top: 10px;
-    margin-right: 20px;
+    margin-right: 18px;
   }
 
   .navBar .menu .line {
     height: 4px;
-    width: 28px;
+    width: 25px;
   }
 
   .navBar {

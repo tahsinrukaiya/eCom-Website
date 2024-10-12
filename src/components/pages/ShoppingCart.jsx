@@ -34,8 +34,8 @@ export default function ShoppingCart() {
                                     <img src={item.image.url} alt="itemPhoto" />
                                 </div>
                                 {item.title} - {item.price}kr x {item.quantity}
-                                <button className="minus_btn" onClick={() => decrementQuantity(item.id)}>-</button>
-                                <button className="plus_btn" onClick={() => incrementQuantity(item.id)}>+</button>
+                                <div className="plus_minus"> <button className="minus_btn" onClick={() => decrementQuantity(item.id)}>-</button>
+                                    <button className="plus_btn" onClick={() => incrementQuantity(item.id)}>+</button></div>
                             </div>
                         ))}
                         <h3>Total: {totalAmount.toFixed(2)}kr</h3>
