@@ -67,22 +67,20 @@ Follow these steps to set up the project locally and start exploring:
 
 1️⃣ Clone the Repository
 
-bash
+on git bash
 Copy code
 git clone https://github.com/tahsinrukaiya/eCom-website.git  
-cd online-shop  
+cd online-shop
+
 2️⃣ Install Dependencies
 Make sure you have Node.js installed on your system. Then, install the required packages:
 
-bash
-Copy code
-npm install  
+npm install 
+
 3️⃣ Start the Development Server
 
 Run the following command to start the project locally:
 
-bash
-Copy code
 npm start  
 The app will be live on http://localhost:3000.
 
@@ -90,8 +88,6 @@ The app will be live on http://localhost:3000.
 
 To create an optimized build of the app, use:
 
-bash
-Copy code
 npm run build  
 This generates a build folder containing production-ready files.
 
