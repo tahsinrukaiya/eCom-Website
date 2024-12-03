@@ -25,6 +25,7 @@ Add to Cart functionality for a smooth shopping experience.
 A dedicated space to review your selected items.
 Displays quantities, itemized pricing, and a total price calculation.
 Checkout Button for completing your purchase with ease.
+
 ✅ Checkout Success Page
 
 A cheerful confirmation message to celebrate your successful order.
