@@ -109,6 +109,7 @@ https://www.linkedin.com/in/rukaiya-tahsin/
 This project would not have been possible without the guidance, tools, and resources provided throughout my learning journey. I’d like to thank:
 
 🏫 Noroff School of Technology and Digital Media for providing the project brief and API, which laid the foundation for this eCommerce application.
+
 💡 My instructors and peers for their support and valuable feedback during the development process.
 
 Thank You!
