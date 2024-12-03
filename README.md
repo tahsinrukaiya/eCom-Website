@@ -1,8 +1,8 @@
 ![ecom](https://github.com/user-attachments/assets/c641f3ee-bab3-45b3-a896-42ae061a8e2b)
 
-🛒 #Online Shop
+🛒 Online Shop
 
-🌟 ##Project Overview
+🌟 Project Overview
 Welcome to the Online Shop, a modern, responsive eCommerce application powered by React! This project brings together dynamic UI/UX design, seamless API integration, and intuitive navigation to deliver a delightful shopping experience.
 
 ✨ Features at a Glance:
