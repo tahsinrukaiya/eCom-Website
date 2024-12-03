@@ -109,4 +109,6 @@ This project would not have been possible without the guidance, tools, and resou
 
 💡 My instructors and peers for their support and valuable feedback during the development process.
 
+📞 Contact For questions or suggestions, please reach out to me at tahsinshorna@gmail.com
+
 Thank You!
